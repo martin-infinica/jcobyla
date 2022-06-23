@@ -29,19 +29,21 @@ package com.cureos.numerics;
  * 
  * @author Anders Gustafsson, Cureos AB.
  */
-public enum CobylaExitStatus {
-    /**
-     * Optimization successfully completed.
-     */
-    Normal,
-    
-    /**
-     * Maximum number of iterations (function/constraints evaluations) reached during optimization.
-     */
-    MaxIterationsReached,
-    
-    /**
-     * Size of rounding error is becoming damaging, terminating prematurely.
-     */
-    DivergingRoundingErrors
+public enum CobylaExitStatus
+{
+	/**
+	 * Optimization successfully completed.
+	 */
+	Normal,
+
+	/**
+	 * Maximum number of iterations (function/constraints evaluations) reached
+	 * during optimization.
+	 */
+	MaxIterationsReached,
+
+	/**
+	 * Size of rounding error is becoming damaging, terminating prematurely.
+	 */
+	DivergingRoundingErrors
 }

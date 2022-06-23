@@ -24,19 +24,31 @@
  */
 package com.cureos.numerics;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
+
 /**
- * Interface for calculation of objective function and constraints in COBYLA2 optimization.
+ * Interface for calculation of objective function and constraints in COBYLA2
+ * optimization.
  * 
  * @author Anders Gustafsson, Cureos AB.
  */
-public interface Calcfc {
-    /**
-     * The objective and constraints function evaluation method used in COBYLA2 minimization.
-     * @param n Number of variables.
-     * @param m Number of constraints.
-     * @param x Variable values to be employed in function and constraints calculation.
-     * @param con Calculated function values of the constraints.
-     * @return Calculated objective function value.
-     */
-    double Compute(int n, int m, double[] x, double[] con);
+public interface Calcfc
+{
+	/**
+	 * The objective and constraints function evaluation method used in COBYLA2
+	 * minimization.
+	 * 
+	 * @param n
+	 *          Number of variables.
+	 * @param m
+	 *          Number of constraints.
+	 * @param x
+	 *          Variable values to be employed in function and constraints
+	 *          calculation. (input)
+	 * @param con
+	 *          Calculated function values of the constraints. (output)
+	 * @return Calculated objective function value.
+	 */
+	BigDecimal compute(int n, int m, BigDecimal[] x, BigDecimal[] con, MathContext mc);
 }
